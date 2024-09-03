@@ -6,7 +6,6 @@ import plotly.graph_objs as plotly_go
 from sklearn.preprocessing import MinMaxScaler
 import streamlit as st
 from tensorflow.keras.models import load_model
-import seaborn as sns
 import plotly.graph_objs as go
 import plotly.express as px
 from PIL import Image
