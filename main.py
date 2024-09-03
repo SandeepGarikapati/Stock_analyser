@@ -201,21 +201,26 @@ with st.spinner('Model is training. Please wait...'):
     st.session_state.predictions = y_pred
     st.session_state.y_test = y_test
 
+dates = pd.date_range(start='2000-01-01',end=d_end, freq='Y')
+st.session_state.years = dates.year.tolist()
 if st.session_state.model_ready:
     st.subheader("Predictions vs Original")
 
     # Create interactive plot with Plotly
     fig = go.Figure()
 
+    # Assuming you have a list of years corresponding to the test data
+    years = st.session_state.years  # Replace this with your actual years list
+
     fig.add_trace(go.Scatter(
-        x=list(range(len(st.session_state.y_test))),
+        x=years,
         y=st.session_state.y_test.flatten(),  # Flatten to convert 2D array to 1D
         mode='lines',
         name='Original Price'
     ))
 
     fig.add_trace(go.Scatter(
-        x=list(range(len(st.session_state.predictions))),
+        x=years,
         y=st.session_state.predictions.flatten(),  # Flatten to convert 2D array to 1D
         mode='lines',
         name='Predicted Price'
@@ -223,7 +228,7 @@ if st.session_state.model_ready:
 
     fig.update_layout(
         title='Predictions vs Original',
-        xaxis_title='Time',
+        xaxis_title='Year',  # Updated x-axis title
         yaxis_title='Price',
         legend_title='Legend'
     )
