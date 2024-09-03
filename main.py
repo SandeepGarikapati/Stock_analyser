@@ -15,54 +15,54 @@ st.set_page_config(
         page_title="Stockanalyzee",
         page_icon=im,
     )
-primary_color = "#EF5A6F"
-secondary_color = "#FFF1DB"
-tertiary_color = "#D4BDAC"
-text_color = "#536493"
-css = f"""
-<style>
-    .reportview-container .main .block-container{{
-        max-width: 90%;
-        padding-top: 5rem;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        padding-bottom: 5rem;
-    }}
-    .reportview-container .main {{
-        color: {text_color};
-        background-color: {secondary_color};
-    }}
-    .reportview-container .main .block-container {{
-        background-color: {tertiary_color};
-        border-radius: 10px;
-        padding: 2rem;
-    }}
-    .reportview-container .main .block-container .element-container {{
-        background-color: {tertiary_color};
-        border-radius: 10px;
-        padding: 1rem;
-    }}
-    .reportview-container .main .block-container .element-container:hover {{
-        background-color: {primary_color};
-        color: {secondary_color};
-    }}
-    .reportview-container .main .block-container .element-container .stButton > button {{
-        background-color: {primary_color};
-        color: {secondary_color};
-    }}
-    .reportview-container .main .block-container .element-container .stButton > button:hover {{
-        background-color: {text_color};
-        color: {secondary_color};
-    }}
-</style>
-"""
+# primary_color = "#EF5A6F"
+# secondary_color = "#FFF1DB"
+# tertiary_color = "#D4BDAC"
+# text_color = "#536493"
+# css = f"""
+# <style>
+#     .reportview-container .main .block-container{{
+#         max-width: 90%;
+#         padding-top: 5rem;
+#         padding-right: 1rem;
+#         padding-left: 1rem;
+#         padding-bottom: 5rem;
+#     }}
+#     .reportview-container .main {{
+#         color: {text_color};
+#         background-color: {secondary_color};
+#     }}
+#     .reportview-container .main .block-container {{
+#         background-color: {tertiary_color};
+#         border-radius: 10px;
+#         padding: 2rem;
+#     }}
+#     .reportview-container .main .block-container .element-container {{
+#         background-color: {tertiary_color};
+#         border-radius: 10px;
+#         padding: 1rem;
+#     }}
+#     .reportview-container .main .block-container .element-container:hover {{
+#         background-color: {primary_color};
+#         color: {secondary_color};
+#     }}
+#     .reportview-container .main .block-container .element-container .stButton > button {{
+#         background-color: {primary_color};
+#         color: {secondary_color};
+#     }}
+#     .reportview-container .main .block-container .element-container .stButton > button:hover {{
+#         background-color: {text_color};
+#         color: {secondary_color};
+#     }}
+# </style>
+# """
+
+#
+# # Inject custom CSS
+# st.markdown(css, unsafe_allow_html=True)
 
 
-# Inject custom CSS
-st.markdown(css, unsafe_allow_html=True)
-
-
-st.title("Stock Trend Predictor")
+st.title("Stockanalyzee")
 
 
 if 'model_ready' not in st.session_state:
